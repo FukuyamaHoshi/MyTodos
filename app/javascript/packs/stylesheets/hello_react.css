@@ -10,10 +10,10 @@
     width: 90%;
 }
 
-.form-wrap {
+.wrap {
     border: solid 2px rgb(168, 197, 224);
     width: 100%;
-    height: 50px;
+    height: auto;
 }
 
 .form {
