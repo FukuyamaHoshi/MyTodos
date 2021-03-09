@@ -43,7 +43,7 @@ class Form extends React.Component {
         return (
             <div className="wrap">
             <form onSubmit={this.handleSubmit} className="form">
-                <input type="text" placeholder="やらなければいけないこと" className="form-input" onChange={this.handleChange} value={this.state.value}/>
+                <input type="text" placeholder="  やらなければいけないこと" className="form-input" onChange={this.handleChange} value={this.state.value}/>
             </form>
                 {
                     this.state.lists.map((value, index) => (
