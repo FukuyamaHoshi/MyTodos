@@ -1,5 +1,5 @@
-import React from 'react'
-import Button from '@material-ui/core/Button'
+import React from 'react';
+import {Button, Box} from '@material-ui/core';
 
 class Form extends React.Component {
 
@@ -39,6 +39,13 @@ class Form extends React.Component {
         this.setState({lists: copyState});
     }
 
+    buttonStyles = {
+        maxWidth: '30px',
+        maxHeight: '30px',
+        minHeight: '30px',
+        minWidth: '30px'
+    }
+
     render() {
         return (
             <div className="wrap">
@@ -48,9 +55,11 @@ class Form extends React.Component {
                 {
                     this.state.lists.map((value, index) => (
                         <div className="lists">
-                            <input type="checkbox"/>
-                            <span>{value}</span>
-                            <Button data-num ={index} onClick={this.handleDeleteClick} size="small">✖️</Button>
+                            <input type="checkbox" id="checkBox" className="box-span-checkbox"/>
+                            <span className="box-span-checkbox" id="value-span">{value}</span>
+                            <Box className="box-span-checkbox" id="crossButtonBox"> 
+                            <Button data-num ={index} onClick={this.handleDeleteClick} style={this.buttonStyles} id="crossButton">✖️</Button>
+                            </Box>
                         </div>
                     ))
                 }

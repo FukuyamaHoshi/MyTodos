@@ -19,13 +19,14 @@
     border: solid 2px rgb(168, 197, 224);
     width: 90%;
     height: auto;
-    height: 60px;
+    background-color:gray;
 }
 
 .form {
     width: 100%;
-    height: 100%;
+    height: 80px;
     position: relative;
+    background-color: white;
 }
 
 .form-input {
@@ -37,4 +38,36 @@
     left: 50%;
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
+    font-weight: bold;
+    font-size: 15px;
 }
+
+.lists {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    margin-top: 1px;
+    position: relative;
+}
+#checkBox {
+    margin-left: 20px;
+}
+
+#value-span {
+    margin-left: 50px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.box-span-checkbox {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#crossButtonBox {
+    margin-left: 90%;
+}
+
