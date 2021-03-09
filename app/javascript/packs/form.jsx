@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '@material-ui/core/Button'
 
 class Form extends React.Component {
 
@@ -12,7 +13,6 @@ class Form extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleCheckboxClick = this.handleCheckboxClick.bind(this);
     }
 
     handleSubmit = (event) => {
@@ -31,8 +31,12 @@ class Form extends React.Component {
         this.setState({value: event.target.value});
     }
 
-    handleCheckboxClick = (event) => {
-        console.log(event.currentTarget.getAttribute('data-num'));
+    handleDeleteClick = (event) => {
+        let index = event.currentTarget.getAttribute('data-num');
+        let copyState = this.state.lists.slice();
+        copyState.splice(index, 1);
+
+        this.setState({lists: copyState});
     }
 
     render() {
@@ -44,9 +48,9 @@ class Form extends React.Component {
                 {
                     this.state.lists.map((value, index) => (
                         <div className="lists">
-                            <input type="checkbox" data-num={index} onClick={this.handleCheckboxClick}/>
+                            <input type="checkbox"/>
                             <span>{value}</span>
-                            <button>✖️</button>
+                            <Button data-num ={index} onClick={this.handleDeleteClick} size="small">✖️</Button>
                         </div>
                     ))
                 }
